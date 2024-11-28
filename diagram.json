@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "author": "Fuji Higashi",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -228.66, "left": 16, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 120.3, "left": -251.67, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo2", "top": 166.63, "left": 382.66, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo3", "top": 47.63, "left": 228.34, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo4", "top": 284.62, "left": 234, "attrs": {} },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joystick1",
+      "top": -240.74,
+      "left": -271.67,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joystick2",
+      "top": -242.37,
+      "left": -152.33,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "servo3:GND", "uno:GND.3", "black", [ "h0" ] ],
+    [ "servo2:GND", "uno:GND.3", "black", [ "h0" ] ],
+    [ "servo4:GND", "uno:GND.3", "black", [ "h0" ] ],
+    [ "servo1:GND", "uno:GND.2", "black", [ "h-16.66", "v-172.26", "h454.67" ] ],
+    [ "servo3:V+", "uno:3.3V", "red", [ "h0" ] ],
+    [ "servo2:V+", "uno:3.3V", "red", [ "h0" ] ],
+    [ "servo4:V+", "uno:3.3V", "red", [ "h0" ] ],
+    [ "servo1:V+", "uno:3.3V", "red", [ "h-26.66", "v-194.43", "h445.33" ] ],
+    [ "servo1:PWM", "uno:3", "orange", [ "h-40", "v-471.93", "h534.67" ] ],
+    [ "servo3:PWM", "uno:5", "gold", [ "h-14.67", "v38.07", "h234", "v-462.67", "h-222" ] ],
+    [ "servo2:PWM", "uno:6", "green", [ "h-11.66", "v28.41", "h222", "v-581.33", "h-378.67" ] ],
+    [ "servo4:PWM", "uno:9", "blue", [ "h-540.33", "v-659.58", "h484.67", "v13.33" ] ],
+    [ "joystick2:GND", "uno:GND.2", "black", [ "v123.27", "h266.59" ] ],
+    [ "joystick1:GND", "uno:GND.2", "black", [ "v127.27", "h381.93", "v1.33" ] ],
+    [ "joystick1:VCC", "uno:3.3V", "red", [ "v113.94", "h404.34" ] ],
+    [ "joystick2:VCC", "uno:3.3V", "red", [ "v111.94", "h-3" ] ],
+    [ "joystick1:VERT", "uno:A0", "gold", [ "v135.27", "h450.07" ] ],
+    [ "joystick1:HORZ", "uno:A1", "blue", [ "v125.94", "h455.13" ] ],
+    [ "joystick2:VERT", "uno:A4", "yellow", [ "v107.27", "h366.73" ] ],
+    [ "joystick2:HORZ", "uno:A5", "cyan", [ "v111.94", "h375.79" ] ]
+  ],
+  "dependencies": {}
+}
